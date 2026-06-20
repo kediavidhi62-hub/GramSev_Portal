@@ -1,0 +1,412 @@
+export interface RajasthanLocationData {
+  districts: string[];
+  villagesByDistrict: Record<string, string[]>;
+}
+
+export const RAJASTHAN_LOCATION_DATA: Record<string, string[]> = {
+  "Ajmer": [
+    "Kishangarh",
+    "Pushkar",
+    "Beawar",
+    "Nasirabad",
+    "Kekri",
+    "Masuda",
+    "Peesangan",
+    "Sarwar",
+    "Arai",
+    "Gegal",
+    "Srinagar",
+    "Sarsiri",
+    "Ramsar",
+    "Rupangarh",
+    "Jawaja"
+  ],
+  "Alwar": [
+    "Neemrana",
+    "Behror",
+    "Ramgarh",
+    "Bansur",
+    "Rajgarh",
+    "Tijara",
+    "Thanagazi",
+    "Kishangarh Bas",
+    "Mundawar",
+    "Lachhmangarh",
+    "Kherli",
+    "Kathumar",
+    "Tapukara"
+  ],
+  "Banswara": [
+    "Kushalgarh",
+    "Bagidora",
+    "Ghatol",
+    "Garhi",
+    "Anandpuri",
+    "Chhoti Sarwan",
+    "Sajjangarh",
+    "Talwara",
+    "Abapura",
+    "Ganoda"
+  ],
+  "Baran": [
+    "Atru",
+    "Chhabra",
+    "Kishanganj",
+    "Anta",
+    "Mangrol",
+    "Shahbad",
+    "Kalyanpura",
+    "Koyla",
+    "Sorsan"
+  ],
+  "Barmer": [
+    "Balotra",
+    "Siwana",
+    "Gudamalani",
+    "Chohtan",
+    "Baytu",
+    "Sheo",
+    "Pachpadra",
+    "Sindhari",
+    "Samdari",
+    "Ramsar-B",
+    "Gira",
+    "Dhanau"
+  ],
+  "Bharatpur": [
+    "Deeg",
+    "Kaman",
+    "Bayana",
+    "Nagar",
+    "Weir",
+    "Rupbas",
+    "Kumher",
+    "Nadbai",
+    "Pahari",
+    "Uchain",
+    "Sikri",
+    "Januthar"
+  ],
+  "Bhilwara": [
+    "Mandal",
+    "Asind",
+    "Hamirgarh",
+    "Shahpura-B",
+    "Mandalgarh",
+    "Jahazpur",
+    "Kotri",
+    "Karera",
+    "Bijolia",
+    "Suwana",
+    "Hurda",
+    "Banera",
+    "Rupaheli",
+    "Kalyanpura-B"
+  ],
+  "Bikaner": [
+    "Nokha",
+    "Dungargarh",
+    "Loonkaransar",
+    "Kolayat",
+    "Khajuwala",
+    "Pugal",
+    "Sridungargarh",
+    "Bajju",
+    "Chhattargarh",
+    "Napasar",
+    "Deshnoke"
+  ],
+  "Bundi": [
+    "Keshoraipatan",
+    "Nainwa",
+    "Hindoli",
+    "Talera",
+    "Indergarh",
+    "Khatkar",
+    "Dablana",
+    "Lakheri"
+  ],
+  "Chittorgarh": [
+    "Nimbahera",
+    "Rawatbhata",
+    "Bari Sadri",
+    "Begun",
+    "Kapasan",
+    "Gangrar",
+    "Rashmi",
+    "Bhadesar",
+    "Dungla",
+    "Bassi-C"
+  ],
+  "Churu": [
+    "Ratangarh",
+    "Sujangarh",
+    "Rajgarh-C",
+    "Sardarshahar",
+    "Taranagar",
+    "Bidasar",
+    "Sidhmukh",
+    "Dudhwa Khara",
+    "Sahawa"
+  ],
+  "Dausa": [
+    "Lalsot",
+    "Bandikui",
+    "Sikrai",
+    "Mahwa",
+    "Nangala Rajaji",
+    "Ramgarh Pachwara",
+    "Paparda",
+    "Bhandarej",
+    "Sainthal"
+  ],
+  "Dholpur": [
+    "Bari",
+    "Rajakhera",
+    "Baseri",
+    "Saipau",
+    "Sarmathura",
+    "Mania",
+    "Sepau",
+    "Kanpur-Dh"
+  ],
+  "Dungarpur": [
+    "Sagwara",
+    "Simalwara",
+    "Aspur",
+    "Bichhiwara",
+    "Galliakot",
+    "Sabla",
+    "Obra",
+    "Palwara"
+  ],
+  "Hanumangarh": [
+    "Nohar",
+    "Bhadra",
+    "Rawatsar",
+    "Pilibanga",
+    "Sangaria",
+    "Tibbi",
+    "Goluwala",
+    "Pallu",
+    "Dabli Rathan"
+  ],
+  "Jaipur": [
+    "Sanganer",
+    "Amer",
+    "Chomu",
+    "Shahpura-J",
+    "Kotputli",
+    "Phulera",
+    "Bassi",
+    "Jamwa Ramgarh",
+    "Govindgarh",
+    "Sambhar",
+    "Viratnagar",
+    "Dudu",
+    "Chaksu",
+    "Bagru",
+    "Jobner"
+  ],
+  "Jaisalmer": [
+    "Pokhran",
+    "Fatehgarh",
+    "Ramgarh-J",
+    "Sam",
+    "Sankra",
+    "Bhaniyana",
+    "Nachna",
+    "Lathi"
+  ],
+  "Jalore": [
+    "Ahore",
+    "Sanchore",
+    "Bhinmal",
+    "Sayla",
+    "Raniwara",
+    "Bagoda",
+    "Jhasan",
+    "Bhadrajun"
+  ],
+  "Jhalawar": [
+    "Khanpur",
+    "Jhalrapatan",
+    "Aklera",
+    "Sunel",
+    "Pidawa",
+    "Pirawa",
+    "Manohar Thana",
+    "Bakani",
+    "Dag",
+    "Choumehla"
+  ],
+  "Jhunjhunu": [
+    "Pilani",
+    "Chirawa",
+    "Nawalgarh",
+    "Khetri",
+    "Udaipurwati",
+    "Buhana",
+    "Surajgarh",
+    "Mandawa",
+    "Malsisar",
+    "Baggar",
+    "Gudha Gorji"
+  ],
+  "Jodhpur": [
+    "Luni",
+    "Bilara",
+    "Osian",
+    "Bhopalgarh",
+    "Tiwari",
+    "Piparcity",
+    "Mandore",
+    "Shergarh",
+    "Balesar",
+    "Phalodi",
+    "L लोहावट",
+    "Tinwari",
+    "Chamoo"
+  ],
+  "Karauli": [
+    "Hindaun City",
+    "Todabhim",
+    "Sapotra",
+    "Mandrail",
+    "Masalpur",
+    "Karanpur-K",
+    "Wazirpur",
+    "Shri Mahaveerji"
+  ],
+  "Kota": [
+    "Sangod",
+    "Ramganj Mandi",
+    "Pipalda",
+    "Digod",
+    "Ladpura",
+    "Kaithoon",
+    "Kanwas",
+    "Mandana",
+    "Sultanpur-K"
+  ],
+  "Nagaur": [
+    "Didwana",
+    "Kuchaman",
+    "Merta",
+    "Degana",
+    "Ladnun",
+    "Parbatsar",
+    "Makrana",
+    "Jayal",
+    "Khinvsar",
+    "Riyan Badi",
+    "Mundwa",
+    "Basni",
+    "Gachhipura"
+  ],
+  "Pali": [
+    "Sohan",
+    "Sumerpur",
+    "Sojat",
+    "Bali",
+    "Jaitaran",
+    "Marwar Junction",
+    "Rohat",
+    "Desuri",
+    "Rani",
+    "Takhatgarh",
+    "Sanderao"
+  ],
+  "Pratapgarh": [
+    "Arnod",
+    "Dhariyawad",
+    "Chhoti Sadri",
+    "Peepal Khoont",
+    "Dhamotar",
+    "Dalot",
+    "Suhagpura"
+  ],
+  "Rajsamand": [
+    "Nathdwara",
+    "Kankroli",
+    "Amet",
+    "Kumbhalgarh",
+    "Deogarh",
+    "Bhim",
+    "Railmagra",
+    "Khamnore",
+    "Delwara"
+  ],
+  "Sawai Madhopur": [
+    "Gangapur City",
+    "Bamanwas",
+    "Ch चौथ का बरवाड़ा",
+    "Khandar",
+    "Bonli",
+    "Malarna Dungar",
+    "Piloda"
+  ],
+  "Sikar": [
+    "Reengus",
+    "Dantaramgarh",
+    "Fatehpur",
+    "Laxmangarh",
+    "Ramgarh Shekhawati",
+    "Neem Ka Thana",
+    "Sri Madhopur",
+    "Khandela",
+    "Ajeetgarh",
+    "Palsana"
+  ],
+  "Sirohi": [
+    "Mount Abu",
+    "Abu Road",
+    "Pindwara",
+    "Reodar",
+    "Sheoganj",
+    "Swarupganj",
+    "Kalandri"
+  ],
+  "Sri Ganganagar": [
+    "Suratgarh",
+    "Anupgarh",
+    "Ghadshana",
+    "Sadulshahar",
+    "Karanpur-SG",
+    "Padampur",
+    "Raisinghnagar",
+    "Vijay Nagar",
+    "Gajsinghpur"
+  ],
+  "Tonk": [
+    "Deoli",
+    "Malpura",
+    "Newai",
+    "Todaraisingh",
+    "Uniara",
+    "Peeplu",
+    "Duni",
+    "Banasthali"
+  ],
+  "Udaipur": [
+    "Vallabhnagar",
+    "Mavli",
+    "Salumber",
+    "Gogunda",
+    "Girwa",
+    "Kherwara",
+    "Jhadol",
+    "Rishabhdeo",
+    "Kotra",
+    "Sarada",
+    "Kurabad",
+    "Semari"
+  ]
+};
+
+// Sort districts and villages alphabetically
+export const RAJASTHAN_DISTRICTS = Object.keys(RAJASTHAN_LOCATION_DATA).sort();
+
+export function getVillagesForDistrict(district: string): string[] {
+  return RAJASTHAN_LOCATION_DATA[district] ? [...RAJASTHAN_LOCATION_DATA[district]].sort() : [];
+}

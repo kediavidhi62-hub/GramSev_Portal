@@ -1,0 +1,12 @@
+{
+  "name": "Remix: Remix: Gram Panchayat Operations App",
+  "description": "Bilingual (Hindi/English) offline-first command center and citizen portal for rural local governments in Rajasthan. Powered by Voice-First Bhashini simulation, SabhaSaar AI, Geo-tagging, and Scheme Discovery.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
