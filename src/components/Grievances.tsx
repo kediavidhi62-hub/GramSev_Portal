@@ -131,8 +131,10 @@ export default function Grievances({
       }
 
       setDescription(voicePreFill?.spokenText || "");
-      setCName("Prem Singh Lal");
-      setCPhone("9414012345");
+      const savedUser = JSON.parse(localStorage.getItem("user") || "{}");
+
+      setCName(savedUser.name || savedUser.fullName || "");
+      setCPhone(savedUser.phone || savedUser.mobile || "");
       setSimLat(26.8130 + Math.random() * 0.005);
       setSimLon(75.8010 + Math.random() * 0.005);
       setImageUrl("simulated-grev-leak.png");
@@ -153,11 +155,9 @@ export default function Grievances({
     e.preventDefault();
 
     // Default values translated safely
-    const defaultCitizenName = language === AppLanguage.MW 
-      ? "प्रेम सिंह लाल सा" 
-      : language === AppLanguage.HI 
-      ? "प्रेम सिंह लाल" 
-      : "Prem Singh Lal";
+    const user = JSON.parse(localStorage.getItem("user") || "{}");
+
+    const defaultCitizenName = user.name || user.fullName || "";
 
     const defaultOfficer = language === AppLanguage.MW 
       ? "वार्ड पंच / पंचायत सचिव सा" 

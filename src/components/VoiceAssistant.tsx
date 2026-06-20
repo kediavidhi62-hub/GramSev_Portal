@@ -184,10 +184,22 @@ export default function VoiceAssistant({
         // Trigger page navigation based on classified action
         setTimeout(() => {
           let tab = "voice";
-          if (data.analyzedAction === "CERTIFICATE") tab = "certificates";
-          else if (data.analyzedAction === "COMPLAINT") tab = "grievances";
-          else if (data.analyzedAction === "SCHEME") tab = "schemes";
-          
+
+if (data.analyzedAction === "CERTIFICATE") {
+  tab = "certificates";
+}
+else if (data.analyzedAction === "COMPLAINT") {
+  tab = "grievances";
+}
+else if (data.analyzedAction === "SCHEME") {
+  tab = "schemes";
+}
+else if (data.analyzedAction === "CHAT") {
+  tab = "voice";
+}
+console.log("VOICE RESULT:", data);
+console.log("ACTION:", data.analyzedAction);
+
           if (tab !== "voice") {
             setTab(tab);
             onClassifyResult({

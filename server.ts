@@ -292,10 +292,33 @@ app.post("/api/ai/voice-classifier", async (req: Request, res: Response) => {
   if (!ai) {
     // Local fallback classifier
     const lower = (spokenText || "").toLowerCase();
-    let action = "COMPLAINT";
-    let type = "WATER";
+
+    if (
+  lower.includes("hello") ||
+  lower.includes("hi") ||
+  lower.includes("hey") ||
+  lower.includes("namaste")
+) {
+  return res.json({
+    success: true,
+    mode: "local_nlp",
+    analyzedAction: "CHAT",
+    confidenceScore: 0.95,
+    extractedEntities: {
+      keyword: lower,
+      classification: "GENERAL"
+    },
+    responseAudioTranscript:
+      "Namaste! How can I help you today?"
+  });
+}
+
+    let action = "CHAT";
+    let type = "GENERAL";
     let labelEN = "Grievance Filing";
     let labelHI = "शिकायत दर्ज करना";
+
+    
 
     if (lower.includes("cert") || lower.includes("praman") || lower.includes("caste") || lower.includes("income") || lower.includes("birth") || lower.includes("domicile") || lower.includes("widow") || lower.includes("vidhwa") || lower.includes("ews") || lower.includes("bpl") || lower.includes("noc") || lower.includes("resident") || lower.includes("niwas")) {
       action = "CERTIFICATE";
