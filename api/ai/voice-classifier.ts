@@ -47,27 +47,44 @@ export default async function handler(req: Request, res: Response) {
     let labelHI = "शिकायत दर्ज करना";
 
     if (
-      lower.includes("cert") ||
-      lower.includes("praman") ||
-      lower.includes("caste") ||
-      lower.includes("income") ||
-      lower.includes("birth") ||
-      lower.includes("domicile")
-    ) {
-      action = "CERTIFICATE";
-      type = "DOMICILE";
-      labelEN = "Certificate Application";
-      labelHI = "प्रमाण पत्र आवेदन";
-    } else if (
-      lower.includes("yojna") ||
-      lower.includes("scheme") ||
-      lower.includes("pension")
-    ) {
-      action = "SCHEME";
-      type = "MATCH";
-      labelEN = "Scheme Benefits Search";
-      labelHI = "योजना लाभ खोजना";
-    }
+  lower.includes("cert") ||
+  lower.includes("praman") ||
+  lower.includes("caste") ||
+  lower.includes("income") ||
+  lower.includes("birth") ||
+  lower.includes("domicile")
+) {
+  action = "CERTIFICATE";
+  type = "DOMICILE";
+  labelEN = "Certificate Application";
+  labelHI = "प्रमाण पत्र आवेदन";
+}
+else if (
+  lower.includes("complaint") ||
+  lower.includes("grievance") ||
+  lower.includes("problem") ||
+  lower.includes("issue") ||
+  lower.includes("water") ||
+  lower.includes("road") ||
+  lower.includes("street light") ||
+  lower.includes("drainage") ||
+  lower.includes("sanitation")
+) {
+  action = "COMPLAINT";
+  type = "GRIEVANCE";
+  labelEN = "Grievance Filing";
+  labelHI = "शिकायत दर्ज करना";
+}
+else if (
+  lower.includes("yojna") ||
+  lower.includes("scheme") ||
+  lower.includes("pension")
+) {
+  action = "SCHEME";
+  type = "MATCH";
+  labelEN = "Scheme Benefits Search";
+  labelHI = "योजना लाभ खोजना";
+}
 
     return res.json({
       success: true,
