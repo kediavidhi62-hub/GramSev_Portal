@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { GoogleGenAI } from "@google/genai";
 
 
-
+//test
 const getGeminiClient = () => {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey || apiKey === "MY_GEMINI_API_KEY") {
