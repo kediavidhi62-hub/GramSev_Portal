@@ -20,12 +20,19 @@ export default async function handler(req: Request, res: Response) {
   const lower = (spokenText || "").toLowerCase().trim();
 
   if (
-    lower === "hello" ||
-    lower === "hi" ||
-    lower === "hey" ||
-    lower === "namaste" ||
-    lower === "नमस्ते"
-  ) {
+  lower.includes("hello") ||
+  lower.includes("hi") ||
+  lower.includes("hey") ||
+  lower.includes("namaste") ||
+  lower.includes("नमस्ते") ||
+  lower.includes("ram ram") ||
+  lower.includes("ramram") ||
+  lower.includes("राम राम") ||
+  lower.includes("रामराम") ||
+  lower.includes("ram ram sa") ||
+  lower.includes("khamma ghani") ||
+  lower.includes("खम्मा घणी")
+) {
     return res.json({
       success: true,
       mode: "chat",
